@@ -136,10 +136,11 @@ Install and setup Django as follows:
 
 4. Activate virtual environment:
 
-> $ ``.\venv\Scripts\activate``
+> $ ``./venv/Scripts/activate``
 
 5. Create requirements file: <b style="color:red;">VALIDATE</b>
-> $ ``copy NUL > requirements.txt``
+
+> $ ``cd > requirements.txt``
 
 6. Add Django to the list of requirements by adding the folling to requirements.txt:
 

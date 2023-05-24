@@ -138,7 +138,7 @@ Install and setup Django as follows:
 
 > $ ``./venv/Scripts/activate``
 
-5. Create requirements file: <b style="color:red;">VALIDATE</b>
+5. Create requirements file:
 
 > $ ``cd > requirements.txt``
 

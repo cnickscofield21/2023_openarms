@@ -76,6 +76,12 @@ WSGI_APPLICATION = 'OpenArmsRoot.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'openarmsdb',
+        'USER': 'openarms',
+            'PASSWORD': '^m&9*EP&TyRF&D',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 

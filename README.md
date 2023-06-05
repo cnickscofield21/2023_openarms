@@ -1,5 +1,15 @@
 # Setting Up Python-Django Environment
 
+This project was developed using:
+
+* Python 3.10.6
+
+* Django 4.2.2
+
+* Postgres 14.7
+
+* psycopg2_binary 2.9.6
+
 ## Unix Installation Commands
 
 Install python using instructions found at [python.org](https://www.python.org/downloads/)
@@ -12,7 +22,7 @@ Install and setup Django as follows:
 
 2. Create working directory:
 
-> $ ``mkdir project-name``
+> $ ``mkdir 2023_openarms``
 
 3. Enter working directory, create virtual environment:
 
@@ -27,7 +37,7 @@ Install and setup Django as follows:
 
 6. Add Django to the list of requirements by adding the folling to requirements.txt:
 
-> Django==4.2.1
+> Django==4.2.2
 
 7. Install Django:
 
@@ -112,7 +122,9 @@ Install and setup Django as follows:
 >     'OpenArmsApp'
 > ]
 
+23. Create User model. From project root:
 
+> $ ``cd OpenArmsApp && django-admin startapp user``
 
 ---
 
@@ -128,7 +140,7 @@ Install and setup Django as follows:
 
 2. Create working directory:
 
-> $ ``mkdir project-name``
+> $ ``mkdir 2023_openarms``
 
 3. Enter working directory, create virtual environment:
 

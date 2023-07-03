@@ -2,9 +2,9 @@
 
 This project was developed using:
 
-* Python 3.10.6
+* Python 3.11.4
 
-* Django 4.2.2
+* Django 4.2.3
 
 * Postgres 14.7
 
@@ -37,7 +37,7 @@ Install and setup Django as follows:
 
 6. Add Django to the list of requirements by adding the folling to requirements.txt:
 
-> Django==4.2.2
+> Django==4.2.3
 
 7. Install Django:
 

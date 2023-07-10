@@ -45,7 +45,7 @@ Install and setup Django as follows:
 
 8. Create project:
 
-> $ ``django-admin startproject OpenArmsRoot .``
+> $ ``django-admin startproject openarms .``
 
 9. Run migrations:
 
@@ -81,7 +81,7 @@ Install and setup Django as follows:
 
 > postgres=# ``ALTER USER openarms CREATEDB;``
 
-16. Configure DATABASES section of OpenArmsRoot/settings.py file per info file stored offline
+16. Configure DATABASES section of openarms/settings.py file per info file stored offline
 
 17. Re-run migrations to connect to PostgreSQL rather than initial SQLite DB
 
@@ -89,42 +89,56 @@ Install and setup Django as follows:
 
 18. From root of project run:
 
-> $ ``django-admin startapp OpenArmsApp``
+> $ ``django-admin startapp clients``
 
-19. Inside new directory (OpenArmsApp), delete all new files EXCEPT:
+### <span style="color: red;">THIS STEP IS UNDER REVIEW</span>
 
-> \_\_init\_\_.py
+19. Inside new directory (clients), delete all new files EXCEPT:
 
+> \_\_init\_\_.py\
 > apps.py
 
-20. Open OpenArmsApp/apps.py, edit the file so it reads as follows:
+20. Open clients/apps.py, edit the file so it reads as follows:
 
+> ```python
 > from django.apps import AppConfig
 >
 >
 > class OpenarmsConfig(AppConfig):
 >     default_auto_field = 'django.db.models.BigAutoField'
->     name = 'OpenArmsApp'
->     label = 'OpenArmsApp'
+>     name = 'clients'
+>     label = 'clients'
+> ```
 
 21. Open OpenArmsRoot/settings.py, edit the file so it reads as follows:
 
-> \# Application definition
+> ```python
+> # Application definition
 >
 > INSTALLED_APPS = [
->
 >     'django.contrib.admin',
 >     'django.contrib.auth',
 >     'django.contrib.contenttypes',
 >     'django.contrib.sessions',
 >     'django.contrib.messages',
 >     'django.contrib.staticfiles',
->     'OpenArmsApp'
+>     'clients'
 > ]
+> ```
+
+### <span style="color: red;">THIS STEP IS UNDER REVIEW</span>
 
 23. Create User model. From project root:
 
-> $ ``cd OpenArmsApp && django-admin startapp user``
+> $ ``cd clients && django-admin startapp user``
+
+24. Create superuser
+
+> $ ``python manage.py createsuperuser``\
+> ``Username (leave blank to use '<YOUR_USERNAME>'): <DESIRED SUPERUSER NAME>``\
+> ``Email address: <LEAVING BLANK FOR SETUP>``\
+> ``Password: <DESIRED SUPERUSER PASSWORD>``\
+> ``Password (again): <RE-ENTER DESIRED SUPERUSER PASSWORD>``
 
 ---
 
